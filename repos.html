@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Repositories</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="noise"></div>
+
+    <header class="site-header glass">
+      <a class="brand" href="index.html">← Portfolio</a>
+      <nav>
+        <a href="index.html#journey">Journey</a>
+        <a href="index.html#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main class="repo-page">
+      <section class="panel reveal">
+        <h1>GitHub Repository Explorer</h1>
+        <p class="muted">Enter your GitHub username to fetch and display public repositories.</p>
+
+        <form id="repo-form" class="repo-form glass">
+          <label for="username">GitHub Username</label>
+          <div class="row">
+            <input id="username" name="username" type="text" placeholder="e.g. octocat" required />
+            <button class="btn primary" type="submit">Fetch Repos</button>
+          </div>
+        </form>
+
+        <p id="status" class="muted"></p>
+        <div id="repo-list" class="project-grid"></div>
+      </section>
+    </main>
+
+    <script src="repos.js"></script>
+  </body>
+</html>
